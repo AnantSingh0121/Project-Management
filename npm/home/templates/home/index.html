@@ -1,0 +1,86 @@
+{% extends "home\basic.html" %}
+
+{% block title %}
+HOME PAGE
+{% endblock title %}
+
+{% block css %}
+
+{% endblock css %}
+
+{% block body %}
+
+{% if messages %}
+<ul class="messages list-unstyled">
+    {% for message in messages %}
+    <li {% if message.tags %}>
+
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+        <strong> {{ message }} </strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+{% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<main role="main">
+
+
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron" style="text-align: center; ">
+    <br/>
+      <div class="container" >
+        <h1 class="display-3"  > WELCOME TO CREATIVE SUBMISSION !!!
+
+          {% if user.is_authenticated  %}
+        Welcome {{request.user.first_name}}
+          {% endif %}
+</br>
+        </h1>
+        <p>Due to <abbr title="The COVID-19 pandemic, also known as the coronavirus pandemic, is an ongoing global pandemic of coronavirus disease 2019 (COVID-19) caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2). The novel virus was first identified in Wuhan, China, in December 2019; a lockdown in Wuhan and other cities in Hubei province failed to contain the outbreak, and it spread to other parts of mainland China and around the world. The World Health Organization (WHO) declared a Public Health Emergency of International Concern on 30 January 2020, and a pandemic on 11 March 2020. Since 2021, variants of the virus have emerged and become dominant in many countries, with the Delta, Alpha and Beta variants being the most virulent. As of 17 September 2021, more than 227 million cases and 4.66 million deaths have been confirmed, making it one of the deadliest pandemics in history."> Covid - 19 </abbr>pandemic, it has been decided to postpone Learner Support Services at all Regional Centre/ <abbr title="Learner Support Centre"> LSC </abbr></p>
+        <p> The <b>CREATIVE SUBMISSION </b>has, further decided to introduce and adopt “Online Mode” to submit final Project/Dissertation/Field Work Journals/Internship Report to facilitate the learners. </p>
+   
+<marquee width="65%" direction="left" height="45px" >
+<font color="red">
+Last date of Online Submission of Final Project/Dissertation/Field Work Journals/Internship Reports is <b> 25th September 2021</b>
+</font>
+</marquee>
+      </div>
+    </div>
+</br>
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2 align="center"><b>Project Guidelines</b></h2>
+          <p>The learners are expected to prepare the Project Report based on the approved Project proposal wherever applicable as per the project guidelines. The Project guidelines will be the same as contained in project guidelines booklet sent with SLM. The learners may ensure that while uploading digital copy of project through online mode, scanned pages are clear and not blurred, sequence is correct, pages are well lighted and not dim; orientation of pages is same - should not change between portrait and landscape; </p>
+          <p><a class="btn btn-danger" href="https://www.imi.europa.eu/sites/default/files/uploads/documents/apply-for-funding/call-documents/imi1/Annex2_FinalReportTemplate.pdf" role="button" style="border-radius: 50px;box-shadow: 5px 10px pink" >CLICK HERE TO VIEW SAMPLE !!</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2 align="center"><b>Journal Guidelines</b></h2>
+          <p>The learners may ensure that while submitting the final project through Online Mode, the Proposal Proforma is duly approved in original, along with “Synopsis” and Bio-data of the project guide and originality certificate is duly signed by both the Student and the Project Guide with date to be incorporated (wherever applicable). The learners are required to obtain digitally approval in prescribed proforma of the Guide/Supervisor through e-mail before submitting the project through online.</p>
+          <a class="btn btn-danger" href="https://btsau.edu.ua/sites/default/files/scopus/%D0%A1%D1%83%D0%BF%D0%B5%D1%80%20-%20writing_an_academic_journal_article.pdf" role="button" style="border-radius: 50px; box-shadow: 5px 10px pink" >CLICK HERE TO VIEW SAMPLE !! </a></p>
+        </div>
+        <div class="col-md-4">
+          <h2 align="center"><b>Research Paper Guidelines</b></h2>
+          <p>Use an easily readable font like 12 pt Times New Roman. Set 1 inch page margins. Apply double line spacing. Indent every new paragraph ½ inch. Use title case capitalization for headings. The Modalities/feasibility in respect of Research Paper for consideration of collection of primary data, exploration and analysis of secondary research data in lieu of field work journal may be suggested / prepared by the SOSW. A separate guideline to the learner is to be issued from the concerned School for submitting the Research Paper through online.</p>
+          <p><a class="btn btn-danger" href="https://www.coep.org.in/page_assets/491/IEEE_Template_4.pdf" role="button" style="border-radius: 50px; box-shadow: 5px 10px pink">CLICK HERE TO VIEW SAMPLE !!</a></p>
+        </div>
+      </div>
+</br>
+      <hr>
+
+    </div> <!-- /container -->
+
+  </main>
+
+
+  <footer class="container" style="text-align: center">
+    <p><b>&copy; CREATIVE SUBMISSION  2020-2021</b></p>
+  </footer>
+
+
+{% endblock body %}
